@@ -74,6 +74,8 @@ plugins=(git docker zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+source $HOME/.rye/env
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
