@@ -12,6 +12,8 @@ cp -r ~/.config/polybar ~/dotfiles/
 cp -r ~/.config/xfce4 ~/dotfiles/ 
 cp -r ~/.config/rofi ~/rofi/
 cp ~/.zshrc ~/dotfiles/zsh/
+cp ~/.fehbg ~/dotfiles/feh/
+cp -r ~/walls ~/dotfiles/walls
 
 echo "[LOG] Coping done"
 

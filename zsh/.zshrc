@@ -136,3 +136,5 @@ unset __conda_setup
 
 # source /home/sidd/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /home/sidd/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+if [ -e /home/sidd/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sidd/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
