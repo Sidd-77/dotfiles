@@ -15,20 +15,20 @@ cp ~/.zshrc ~/dotfiles/zsh/
 cp ~/.fehbg ~/dotfiles/feh/
 cp -r ~/walls ~/dotfiles/walls
 
-echo "[LOG] Coping done"
+echo "[LOG][$(date '+%d %h %Y : %T')] Coping done"
 
 cd ~/dotfiles/ 
 
-echo "[LOG] Commiting changes"
+echo "[LOG][$(date '+%d %h %Y : %T')] Commiting changes"
 git add .
 git commit -m "backup $(date)"
-echo "[LOG] Changes commited"
+echo "[LOG][$(date '+%d %h %Y : %T')] Changes commited"
 
-echo "[LOG] Pushing changes to remote repository"
+echo "[LOG][$(date '+%d %h %Y : %T')] Pushing changes to remote repository"
 git push
-echo "[LOG] Done"
+echo "[LOG][$(date '+%d %h %Y : %T')] Done"
 
 
-echo "[LOG] Backup done"
+echo "[LOG][$(date '+%d %h %Y : %T')] Backup done"
 
 
