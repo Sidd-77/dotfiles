@@ -1,8 +1,8 @@
 #!/bin/bash 
 
-echo "[LOG] Taking backup of dotfiles"
+echo "[LOG][$(date '+%d %h %Y : %T')] Taking backup of dotfiles"
 
-echo "[LOG] Coping files"
+echo "[LOG][$(date '+%d %h %Y : %T')] Coping files"
 
 cp /etc/anacrontab ~/dotfiles/
 cp -r ~/.config/kitty ~/dotfiles/ 
@@ -13,7 +13,7 @@ cp -r ~/.config/xfce4 ~/dotfiles/
 cp -r ~/.config/rofi ~/rofi/
 cp ~/.zshrc ~/dotfiles/zsh/
 cp ~/.fehbg ~/dotfiles/feh/
-cp -r ~/walls ~/dotfiles/walls
+# cp -r ~/walls ~/dotfiles/walls
 
 echo "[LOG][$(date '+%d %h %Y : %T')] Coping done"
 

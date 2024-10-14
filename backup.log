@@ -1,13 +1,4 @@
-[LOG] Taking backup of dotfiles
-[LOG] Coping files
-[LOG] Coping done
-[LOG] Commiting changes
-On branch main
-Your branch is up to date with 'origin/main'.
-
-nothing to commit, working tree clean
-[LOG] Changes commited
-[LOG] Pushing changes to remote repository
-Everything up-to-date
-[LOG] Done
-[LOG] Backup done
+[LOG][14 Oct 2024 : 20:33:41] Taking backup of dotfiles
+[LOG][14 Oct 2024 : 20:33:41] Coping files
+[LOG][14 Oct 2024 : 20:33:41] Coping done
+[LOG][14 Oct 2024 : 20:33:41] Commiting changes

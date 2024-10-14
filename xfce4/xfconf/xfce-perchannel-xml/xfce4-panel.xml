@@ -36,8 +36,9 @@
         <value type="string" value="xfce4-terminal-emulator.desktop"/>
       </property>
       <property name="recent" type="array">
-        <value type="string" value="kitty.desktop"/>
         <value type="string" value="firefox_firefox.desktop"/>
+        <value type="string" value="google-chrome.desktop"/>
+        <value type="string" value="kitty.desktop"/>
         <value type="string" value="nm-connection-editor.desktop"/>
         <value type="string" value="xfce4-web-browser.desktop"/>
       </property>
