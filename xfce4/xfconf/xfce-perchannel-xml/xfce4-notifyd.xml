@@ -10,6 +10,7 @@
     <property name="known_applications" type="array">
       <value type="string" value="blueman"/>
       <value type="string" value="com.usebottles.bottles"/>
+      <value type="string" value="firefox_Firefox"/>
       <value type="string" value="google-chrome"/>
       <value type="string" value="io.github.zen_browser.zen"/>
       <value type="string" value="kitty"/>
