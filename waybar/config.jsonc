@@ -23,13 +23,6 @@
     "battery",
     "custom/powermenu"
   ],
-  "custom/rofi": {
-    "format": " ",
-    "on-click": "rofi -show drun -disable-history -show-icons",
-    "on-click-right": "~/.config/custom_scripts/power.sh",
-    "escape": true,
-    "tooltip": false
-  },
   "custom/launcher": {
     "format": "  ",
     "tooltip": false,
