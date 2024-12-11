@@ -6,10 +6,9 @@ echo "[LOG][$(date '+%d %h %Y : %T')] Coping files"
 
 cp /etc/anacrontab ~/dotfiles/
 cp -r ~/.config/kitty ~/dotfiles/ 
-cp -r ~/.config/i3 ~/dotfiles/ 
+cp -r ~/.config/sway ~/dotfiles/ 
 cp -r ~/.config/nvim ~/dotfiles/ 
-cp -r ~/.config/polybar ~/dotfiles/ 
-cp -r ~/.config/xfce4 ~/dotfiles/ 
+cp -r ~/.config/waybar ~/dotfiles/ 
 cp -r ~/.config/rofi ~/rofi/
 cp ~/.zshrc ~/dotfiles/zsh/
 cp ~/.fehbg ~/dotfiles/feh/

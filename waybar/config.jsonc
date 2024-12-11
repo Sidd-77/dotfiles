@@ -1,0 +1,208 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-top": 2,
+  "margin-left": 2,
+  "margin-right": 2,
+  "margin-bottom": -1,
+  "height": 20,
+  "spacing": 0,
+  "modules-left": [
+    "custom/launcher",
+    "sway/workspaces",
+    "sway/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "mpris",
+    "backlight",
+    "pulseaudio",
+    "network",
+    "battery",
+    "custom/powermenu"
+  ],
+  "custom/rofi": {
+    "format": " ",
+    "on-click": "rofi -show drun -disable-history -show-icons",
+    "on-click-right": "~/.config/custom_scripts/power.sh",
+    "escape": true,
+    "tooltip": false
+  },
+  "custom/launcher": {
+    "format": "  ",
+    "tooltip": false,
+    "on-click": "/home/sidd/.config/rofi/launchers/type-7/launcher.sh"
+  },
+  // Modules configuration
+  "sway/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "active": "󱓻",
+      "urgent": "󱓻"
+    },
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    }
+  },
+  "network": {
+    "format-wifi": "{icon} {essid}",
+    "format-disconnected": "Disconnected ⚠ ",
+    "format-icons": [
+      "󰤯 ",
+      "󰤟 ",
+      "󰤢 ",
+      "󰤥 ",
+      "󰤨 "
+    ],
+    "tooltip-format-disconnected": "Disconnected",
+    "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "on-click": "~/.config/rofi/rofi-wifi-menu.sh &",
+    "format-ethernet": "{ifname}",
+    "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "nospacing": 1,
+    "interval": 5
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "sway/window": {
+    "format": "<span color='#222222' bgcolor='#d3869b' > WIN </span> {class}",
+    "separate-outputs": true
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 8
+  },
+  "disk": {
+    "format": "<span color='#222222' bgcolor='#ea6962' > DSK </span> {free}",
+    "interval": 20
+  },
+  "cpu": {
+    "format": "<span color='#222222' bgcolor='#e78a4e'> CPU </span> {usage}%",
+    "tooltip": false,
+    "interval": 1
+  },
+  "temperature": {
+    "tooltip": false,
+    "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "critical-threshold": 70,
+    "format-critical": "<span color='#222222' bgcolor='#cc241d' > TEM </span> {temperatureC}°C",
+    "format": "<span color='#222222' bgcolor='#d8a657' > TMP </span> {temperatureC}°C "
+  },
+  // "backlight": {
+  //   // "device": "acpi_video1",
+  //   "format": "<span color='#222222' bgcolor='#f6c657'> BRI </span> {percent}%",
+  //   "tooltip": false
+  // },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "interval": 5,
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "tooltip": false
+  },
+  "custom/powermenu": {
+    "format": "⏻ ",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/powermenu/type-5/powermenu.sh &"
+  },
+  "custom/memory": {
+    "exec": "~/.config/waybar/scripts/memory_usage.sh",
+    "interval": 2,
+    "return-type": "json",
+    "format": "<span color='#222222' bgcolor='#458588'> MEM </span> {}"
+  },
+  // "pulseaudio": {
+  //   // "scroll-step": 1, // %, can be a float
+  //   "format": "<span color='#222222' bgcolor='#83a598'> VOL </span> {volume}%",
+  //   "format-muted": "<span color='#222222' bgcolor='#ea6962'> MUTE </span> {volume}%",
+  //   "format-bluetooth": "<span color='#222222' bgcolor='#83a598'> BLU </span> {volume}%",
+  //   "format-bluetooth-muted": "<span color='#222222' bgcolor='#ea6962'> MUTE </span> {volume}%",
+  //   "format-source": "{volume}% ",
+  //   "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+  //   "tooltip": false,
+  //   "max-volume": 130
+  // },
+  "pulseaudio": {
+    "format": "{icon}{volume}%",
+    "format-bluetooth": "󰂰 {volume}%",
+    "nospacing": 1,
+    "tooltip-format": "Volume : {volume}%",
+    "format-muted": "󰝟 ",
+    "format-icons": {
+      "headphone": " ",
+      "default": [
+        "󰕿 ",
+        "󰖀 ",
+        "󰕾 "
+      ]
+    },
+    "on-click": "pavucontrol",
+    "scroll-step": 1
+  },
+  "battery#bat2": {
+    "bat": "BAT2"
+  },
+  "clock": {
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "format-alt": "   {:%a, %d %b %Y} ",
+    "format": "   {:%I:%M %p} "
+  }
+}

@@ -75,7 +75,6 @@ plugins=(git docker zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-source $HOME/.rye/env
 
 # User configuration
 
@@ -111,32 +110,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/sidd/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/sidd/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/sidd/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/sidd/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# export PYENV_ROOT="$HOME/.pyenv"
-
-# export PATH="$HOME/miniconda3/bin:$PATH"  # commented out by conda initialize
-
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-
-# source /home/sidd/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /home/sidd/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-if [ -e /home/sidd/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sidd/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+source /home/sidd/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
