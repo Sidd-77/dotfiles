@@ -175,7 +175,7 @@ bindsym $mod+Shift+b exec blueman-manager
 bindsym Mod1+Shift+n exec --no-startup-id nm-applet
 
 # Rofi
-bindsym $mod+d exec --no-startup-id rofi -show drun -disable-history -show-icons
+bindsym $mod+d exec ~/.config/rofi/launchers/type-2/launcher.sh
 bindsym Mod1+d exec --no-startup-id rofi -show run -disable-history
 bindsym Mod1+w exec rofi -show window -show-icons
 bindsym $mod+i exec rofi -modi emoji -show emoji
@@ -238,7 +238,7 @@ input "1267:12525:ELAN0710:01_04F3:30ED_Touchpad" {
 bar {
   swaybar_command waybar
 }
-exec nm-applet
+exec_always nm-applet
 exec swaync
 exec foot --server
 exec XDG_CURRENT_DESKTOP=sway
